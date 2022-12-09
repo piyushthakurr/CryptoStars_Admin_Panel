@@ -1,0 +1,53 @@
+@import "../../assets/theme/_var.scss";
+
+.whole {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    &::before {
+        content: "";
+        background-color: rgba(0,0,0,0.9);
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        filter: blur(25px);
+        z-index: -1;
+    }
+  .confirmation_modal {
+    background-color: transparent;
+    border: 1px solid red;
+    backdrop-filter: blur(12px);
+    border-radius: 10px;
+    color: $yellowClr;
+    text-align: center;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    width: 100%;
+    padding: 43px 29px;
+    .modal-content {
+      .modal-body {
+        p {
+          color: $yellowClr;
+          margin-bottom: 10px;
+          
+        }
+        img{
+          height: 113px;
+          width: 80px;
+        }
+      }
+    }
+  }
+}
+

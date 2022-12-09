@@ -1,0 +1,149 @@
+@import "./assets/theme/_var.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  margin: 0;
+  font-family: $baseFont, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // background: $baseColor;
+  // overflow: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+a {
+  text-decoration: none;
+}
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #fbc918 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #fbc918;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+}
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+div {
+  box-sizing: border-box;
+}
+
+.btn {
+  font-family: $secondaryFont;
+  color: $blackColor;
+  font-size: 18px;
+  font-weight: 700;
+  background: $goldenYellow;
+  height: 50px;
+  border-radius: 8px;
+  display: inline-block;
+  line-height: 50px;
+  transition: all 0.25s;
+  border: 1px solid transparent;
+  text-align: center;
+  min-width: 160px;
+  padding: 0;
+
+  @media (max-width: 467px) {
+    min-width: 120px;
+    font-size: 13px;
+  }
+
+  &:hover {
+    background: $baseColor;
+    color: $goldenYellow;
+    border: 1px solid $goldenYellow;
+  }
+
+  &.full {
+    width: 100%;
+  }
+
+  &:disabled {
+    cursor: default;
+    background: $buttonDisabled;
+    color: $baseColor;
+    border-color: $buttonDisabled;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 975px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  margin-left: -15px;
+  margin-right: -15px;
+  flex-wrap: wrap;
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  &:not(:last-child).lessMargin_bottom {
+    margin-bottom: 5px;
+  }
+}
+.col {
+  flex: 1;
+  padding-left: 12px;
+  padding-right: 12px;
+  @media (max-width: 960px) {
+    width: 100%;
+    flex-basis: auto;
+  }
+}
+.farmtop {
+  @media (max-width: 960px) {
+    width: auto !important;
+  }
+}
+
+.cursor--pointer {
+  cursor: pointer;
+}
+path#Icon_ionic-ios-arrow-back {
+  display: none;
+}
+input:focus-visible {
+  outline: none;
+}
+.pro-sidebar
+  .pro-menu
+  .pro-menu-item.pro-sub-menu
+  > .pro-inner-item
+  > .pro-arrow-wrapper {
+  position: absolute;
+  right: 10px !important;
+  top: 50%;
+  transform: translateY(-50%);
+}

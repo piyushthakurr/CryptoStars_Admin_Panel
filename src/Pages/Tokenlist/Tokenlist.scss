@@ -1,0 +1,207 @@
+@import "../../assets/theme/_var.scss";
+.burn-modal--container {
+  // position: relative;
+  .burn-token_modal {
+    padding: 1rem;
+    border: 1px solid red;
+    border-radius: 10px;
+    background: #000;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 410px;
+    z-index: 100;
+    transform: translateY(-50%);
+    .modal_headerStyle__rowA_colRight {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .burn-modal--body {
+      .inputStyle,
+      .inputStyle:focus {
+        width: 100%;
+        height: 25px;
+        font-family: $secondaryFont;
+        font-size: 16px;
+        color: white !important;
+        padding: 10px;
+        border: 1px solid red;
+        background: transparent !important;
+        border-radius: 0px !important;
+        box-shadow: none;
+        outline: none !important;
+      }
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      & * {
+        color: white !important;
+      }
+      & > div {
+        margin-top: 0.5rem;
+        input {
+          color: black !important;
+        }
+      }
+    }
+  }
+}
+
+.burn-input-error {
+  font-size: 9px;
+  font-weight: 600;
+  color: red !important;
+  padding: 0;
+  margin: 0;
+  margin-top: 4px;
+}
+
+.table_responsive {
+  @media (max-width: 991px) {
+    overflow-x: scroll;
+    height: 350px;
+    white-space: nowrap;
+  }
+  .table.table--token-list {
+    margin: 0 auto;
+    border-color: #fff;
+    border: 1px solid $secondaryColor;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 236px;
+    width: 85%;
+    border-collapse: collapse;
+    thead {
+      tr {
+        th {
+          padding: 18px;
+          color: $yellowClr;
+          text-align: left;
+          border: 1px solid $yellowClr;
+        }
+      }
+    }
+    tbody {
+      height: 400px;
+      tr {
+        td {
+          padding: 18px;
+          color: $whiteColor;
+          border: 1px solid $whiteColor;
+        }
+      }
+    }
+  }
+  .pagination {
+    // margin-left: 236px;
+    display: flex;
+    justify-content: end;
+    padding: 30px 50px;
+    li {
+      margin: 0 5px;
+      cursor: pointer;
+      a {
+        color: $yellowClr;
+        position: relative;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.5);
+          font-size: 25px;
+        }
+        // &::before{
+        //   position: absolute;
+        //   content: "";
+        //   width: 20px;
+        //   height: 20px;
+        //   border: 1px solid red;
+        //   border-radius: 10px;
+        // }
+      }
+    }
+  }
+}
+
+.copy-icon {
+  float: right;
+}
+.token_list {
+  // margin-top: 50px;
+  // position: relative;
+  // // background-image: url(../../assets/images/swapBg.png);
+  // // background-size: cover;
+  // // min-height: 100vh;
+  padding: 50px 0;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 250px;
+    gap: 20px;
+    @media (max-width: 960px) {
+      margin: unset;
+      // padding: 0 30px;
+    }
+    .token_card {
+      background-color: black;
+      border: 1px solid $secondaryColor;
+      border-radius: 20px;
+      padding: 10px;
+      display: flex;
+      margin-top: 10px;
+      gap: 18px;
+      justify-content: space-evenly;
+      max-width: 750px;
+      width: 100%;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      @media (max-width: 960px) {
+        max-width: 100%;
+      }
+      // margin-top: 10px;
+      @media (max-width: 991px) {
+        margin: 10px 0px 0;
+        max-width: 100%;
+      }
+      .token_img {
+        // border: 1px solid $whiteColor;
+        img {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+        }
+        // align-self: center;
+      }
+      .add_sec,
+      .supply_sec,
+      .burn-section {
+        display: flex;
+        flex-direction: column;
+        span {
+          margin: 10px 0;
+          label {
+            color: $yellowClr;
+            font-weight: 700;
+            margin-bottom: 5px !important;
+          }
+          .trunc_sec {
+            display: flex;
+            align-items: center;
+          }
+        }
+        button {
+          // margin-top: 15px;
+          margin: 5px;
+          &.token_list_btn {
+            font-size: 16px;
+            @media (max-width: 1199px) {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
